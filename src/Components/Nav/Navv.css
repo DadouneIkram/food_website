@@ -1,0 +1,30 @@
+.logo{
+  width: 10rem;
+  height: 3rem;
+}
+
+.nav{
+  background-color: white;
+  height: 60px;
+  position: fixed;
+}
+
+.d-flex .search-button{
+  background-color: transparent;
+  color: rgb(172, 39, 39);
+  border: 2px solid rgb(172, 39, 39);
+  width: 40%;
+  height: 20%;
+}
+
+.d-flex .search-button:hover{
+  background-color:rgb(172, 39, 39);
+  color: white;
+  border: 2px solidrgb(172, 39, 39);
+}
+
+.nav-link:hover{
+  text-decoration: underline rgb(172, 39, 39) solid 2px;
+  transition: all 0.3s;
+}
+
