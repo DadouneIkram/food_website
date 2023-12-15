@@ -1,3 +1,5 @@
+import React from "react";
+
 export const data = [
   {
     img: require("../../Assests/p1.png"),
@@ -30,18 +32,20 @@ export const data = [
 ];
 
 function Cards(props) {
+  const [Clr, setClr] = React.useState(true);
+  function Toggle() {
+    setClr((v) => !v);
+  }
+////////////////////////////////////////////////
+
   return (
     <div
-    
-      style={
-        {
-          borderRadius:"20px",
-          border :"solid black",
-          padding:"10px"
-        }
-      }
+      style={{
+        borderRadius: "20px",
+        border: "solid black",
+        padding: "10px",
+      }}
     >
-      
       <div
         style={{
           backgroundImage: `url(${props.img})`,
@@ -73,17 +77,38 @@ function Cards(props) {
         </h6>
       </div>
       <h6> {props.desc}</h6>
-      <h6>
-        {" "}
-        {props.price}${" "}
-        <span
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
+        <h6>
+          {" "}
+          {props.price}${" "}
+          <span
+            style={{
+              color: "gray",
+            }}
+          >
+            one piece
+          </span>{" "}
+        </h6>
+        <button
+          onClick={Toggle}
           style={{
-            color: "gray",
+            backgroundColor: Clr ? "" : "rgb(172, 39, 39)",
+            color: "white",
+            border: "2px solid white",
+            borderRadius: "10px",
+            height: " 45px",
           }}
         >
-          night
-        </span>{" "}
-      </h6>
+          Order Now
+        </button>
+      </div>
+      
     </div>
   );
 }

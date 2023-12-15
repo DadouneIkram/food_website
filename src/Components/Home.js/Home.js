@@ -13,6 +13,9 @@ const Home = () => {
       price={item.price}
     />
   ));
+
+  const [firstName, setFirstName] = React.useState("");
+
   return (
     <>
       <Header />
@@ -39,6 +42,18 @@ const Home = () => {
       >
         {dataShow}
       </div>
+      <form action="">
+        <label htmlFor="1">
+          <input
+            id="1"
+            type="text"
+            placeholder="First name"
+            required
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+          />
+        </label>
+      </form>
     </>
   );
 };
