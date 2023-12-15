@@ -16,6 +16,16 @@ const Home = () => {
   return (
     <>
       <Header />
+      <h2
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          marginTop: "20px",
+        }}
+      >
+        Our Menu
+      </h2>
       <div
         style={{
           display: "flex",

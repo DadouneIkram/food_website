@@ -32,13 +32,16 @@ export const data = [
 function Cards(props) {
   return (
     <div
+    
       style={
         {
-          //borderRadius:"20px",
-          //border :"solid black"
+          borderRadius:"20px",
+          border :"solid black",
+          padding:"10px"
         }
       }
     >
+      
       <div
         style={{
           backgroundImage: `url(${props.img})`,
